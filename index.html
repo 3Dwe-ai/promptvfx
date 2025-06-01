@@ -1,1 +1,185 @@
-Hello from GitHub Pages!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="PromptVFX: Text-Driven Fields for Open-World 3D Gaussian Animation">
+    <meta name="keywords" content="PromptVFX, 3D Gaussian Splatting, Text-Driven 3D Animation, LLM, VLM">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PromptVFX: Text-Driven 3D Animation</title>
+
+    <!-- Google Fonts (optional) -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+    <!-- Nerfies’ custom overrides (adapted for PromptVFX) -->
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <!-- Favicon -->
+<!--    <link rel="icon" href="./static/images/favicon.svg">-->
+</head>
+<body>
+
+<!-- Hero / Title -->
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-1 publication-title">PromptVFX: Text‐Driven Fields for 3D Animation</h1>
+                    <div class="is-size-5 publication-authors">
+              <span class="author-block">
+  Mert Kiray<sup>1,2</sup>,
+</span>
+<span class="author-block">
+  Paul Uhlenbruck<sup>1</sup>,
+</span>
+<span class="author-block">
+  Nassir Navab<sup>1</sup>,
+</span>
+<span class="author-block">
+  Benjamin Busam<sup>1,2</sup>
+</span>
+
+                    </div>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block"><sup>1</sup>Technical University of Munich (TUM),</span>
+                        <span class="author-block"><sup>2</sup>3dwe.ai</span>
+                    </div>
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links" style="margin-top: 1rem;">
+                            <!-- Live Demo Link -->
+                            <span class="link-block">
+      <a href="http://promptvfx.duckdns.org/" class="external-link button is-normal is-rounded is-dark"
+         target="_blank">
+        <span class="icon">
+          <i class="fas fa-globe"></i>
+        </span>
+        <span>Live Demo</span>
+      </a>
+    </span>
+                            <!-- arXiv Link -->
+                            <span class="link-block">
+      <a href="https://arxiv.org/abs/XXXX.XXXXX" class="external-link button is-normal is-rounded is-dark"
+         target="_blank">
+        <span class="icon">
+          <i class="ai ai-arxiv"></i>
+        </span>
+        <span>arXiv</span>
+      </a>
+    </span>
+                            <!-- Code Link -->
+                            <span class="link-block">
+      <a href="https://github.com/3dwe-ai/promptvfx" class="external-link button is-normal is-rounded is-dark"
+         target="_blank">
+        <span class="icon">
+          <i class="fab fa-github"></i>
+        </span>
+        <span>Code</span>
+      </a>
+    </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Teaser Section -->
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="hero-body">
+            <figure class="image is-3by1" style="margin: 0 auto; max-width: 800px;">
+                <img src="./static/images/teaser.png" alt="PromptVFX Teaser">
+            </figure>
+            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+                PromptVFX turns plain text prompts into real-time 3D Gaussian animations.
+            </h2>
+        </div>
+    </div>
+</section>
+
+<!-- Pipeline Overview -->
+<section id="pipeline" class="section has-background-light">
+    <div class="container is-max-desktop">
+        <h3 class="title is-3 has-text-centered">Pipeline Overview</h3>
+        <div class="has-text-centered">
+            <figure class="image" style="margin: auto; max-width: 1000px;">
+                <img src="./static/images/pipeline.png" alt="PromptVFX Pipeline Overview"
+                     style="width: 100%; height: auto;">
+            </figure>
+            <p class="is-size-7 has-text-grey"><i>Figure: PromptVFX pipeline overview.</i></p>
+        </div>
+    </div>
+</section>
+
+<!-- Abstract Section -->
+<section class="section">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Visual effects (VFX) are key to immersion in modern films, games, and AR/VR. Creating 3D effects
+                        requires specialized expertise and training in 3D animation software and can be time consuming.
+                        Generative solutions typically rely on computationally intense methods such as diffusion models
+                        which
+                        can be slow at 4D inference. We reformulate 3D animation as a field prediction task and
+                        introduce a
+                        text‐driven framework that infers a time‐varying 4D flow field acting on 3D Gaussians. By
+                        leveraging
+                        large language models (LLMs) and vision‐language models (VLMs) for function generation, our
+                        approach interprets arbitrary prompts (e.g., “make the vase glow orange, then explode”) and
+                        instantly
+                        updates color, opacity, and positions of 3D Gaussians in real time. This design avoids overheads
+                        such
+                        as mesh extraction, manual or physics‐based simulations and allows both novice and expert users
+                        to
+                        animate volumetric scenes with minimal effort on a consumer device even in a web browser.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Paper Video (if available) -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Video</h2>
+                <div class="publication-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UN224aupCIE?si=Z7z_1ADPbaZNBfNM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer has-background-light">
+    <div class="content has-text-centered">
+        <p>&copy; 2025 PromptVFX Team · Maintained by <a href="https://3dwe.ai">3Dwe.ai</a>.</p>
+      <p>We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.</p>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script defer src="./static/js/fontawesome.all.min.js"></script>
+<script src="./static/js/bulma-carousel.min.js"></script>
+<script src="./static/js/bulma-slider.min.js"></script>
+<script src="./static/js/index.js"></script>
+</body>
+</html>
