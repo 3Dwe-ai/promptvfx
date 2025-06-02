@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./static/css/index.css">
 
     <!-- Favicon -->
-<!--    <link rel="icon" href="./static/images/favicon.svg">-->
+    <!--    <link rel="icon" href="./static/images/favicon.svg">-->
 </head>
 <body>
 
@@ -39,13 +39,13 @@
               <span class="author-block">
   Mert Kiray<sup>1,2</sup>,
 </span>
-<span class="author-block">
+                        <span class="author-block">
   Paul Uhlenbruck<sup>1</sup>,
 </span>
-<span class="author-block">
+                        <span class="author-block">
   Nassir Navab<sup>1</sup>,
 </span>
-<span class="author-block">
+                        <span class="author-block">
   Benjamin Busam<sup>1,2</sup>
 </span>
 
@@ -97,15 +97,21 @@
 </section>
 
 <!-- Teaser Section -->
-<section class="hero teaser">
+<section>
     <div class="container is-max-desktop">
-        <div class="hero-body">
-            <figure class="image is-3by1" style="margin: 0 auto; max-width: 800px;">
-                <img src="./static/images/teaser.png" alt="PromptVFX Teaser">
-            </figure>
-            <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
-                PromptVFX turns plain text prompts into real-time 3D Gaussian animations.
-            </h2>
+        <!-- Paper Video (if available) -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <div class="publication-video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UN224aupCIE?si=Z7z_1ADPbaZNBfNM"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <h2 class="subtitle has-text-centered" style="margin-top: 1rem; margin-bottom: 1rem;">
+                    PromptVFX turns plain text prompts into real-time 3D Gaussian animations.
+                </h2>
+            </div>
         </div>
     </div>
 </section>
@@ -152,18 +158,6 @@
                 </div>
             </div>
         </div>
-        <!-- Paper Video (if available) -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-four-fifths">
-                <h2 class="title is-3">Video</h2>
-                <div class="publication-video">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/UN224aupCIE?si=Z7z_1ADPbaZNBfNM"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -171,7 +165,8 @@
 <footer class="footer has-background-light">
     <div class="content has-text-centered">
         <p>&copy; 2025 PromptVFX Team · Maintained by <a href="https://3dwe.ai">3Dwe.ai</a>.</p>
-      <p>We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.</p>
+        <p>We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the
+            template of this website.</p>
     </div>
 </footer>
 
